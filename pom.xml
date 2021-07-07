@@ -15,6 +15,7 @@
         <module>spring_05_ AutoWired</module>
         <module>spring_05_autowried</module>
         <module>spring_06_anno</module>
+        <module>spring_07_appconfig</module>
     </modules>
 
     <dependencies>
