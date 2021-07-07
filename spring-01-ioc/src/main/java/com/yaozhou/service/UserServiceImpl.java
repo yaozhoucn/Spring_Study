@@ -1,6 +1,5 @@
 package com.yaozhou.service;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 import com.yaozhou.dao.UserDao;
 import com.yaozhou.dao.UserDaoImpl;
 
