@@ -22,7 +22,11 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 第三种根据参数类型设置 -->
     <!--通过有参构造来创建java对象-->
-    <bean id="hello" class="com.yaozhou.pojo.User">
+    <!--name也是别名-->
+    <bean id="hello" class="com.yaozhou.pojo.User" name="user2,user3">
         <constructor-arg name="name" value="尧神"/>
     </bean>
+
+    <!--别名-->
+    <alias name="hello" alias="user"/>
 </beans>

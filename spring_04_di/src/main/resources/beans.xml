@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.yaozhou.pojo.Student">
+        <!--第一种不同值注入-->
+        <property name="name" value="尧神"/>
+
+        <!--第二种，bean注入，ref-->
+        <property name="address" ref="address"/>
+        <!--数组注入，ref-->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>斗破苍穹</value>
+                <value>遮天</value>
+                <value>神墓</value>
+            </array>
+        </property>
+        <!--List-->
+        <property name="hobbys">
+            <list>
+                <value>学Java</value>
+                <value>看电影</value>
+                <value>听歌</value>
+            </list>
+        </property>
+        <!--map-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="234"/>
+                <entry key="银行卡" value="234"/>
+            </map>
+        </property>
+        <!--set-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>yuanshen</value>
+                <value>pubg</value>
+            </set>
+        </property>
+        <!--null-->
+        <property name="wife">
+            <null/>
+        </property>
+        <!--properties-->
+        <property name="info">
+            <props>
+                <prop key="xuehao">1234</prop>
+                <prop key="name">yaoshen</prop>
+                <prop key="sex">nan</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="address" class="com.yaozhou.pojo.Address">
+        <property name="address" value="xian"/>
+    </bean>
+
+
+</beans>
