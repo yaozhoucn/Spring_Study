@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--bean就是java对象 , 由Spring创建和管理-->
+    <!--使用spring来创建对象，在sping这些都能称为bean-->
+
+
+    <!-- 第一种根据index参数下标设置 -->
+<!--    <bean id="userT" class="com.kuang.pojo.UserT">
+        &lt;!&ndash; index指构造方法 , 下标从0开始 &ndash;&gt;
+        <constructor-arg index="0" value="kuangshen2"/>
+    </bean>-->
+
+    <!-- 第二种根据参数名字设置 -->
+<!--    <bean id="userT" class="com.kuang.pojo.UserT">
+        &lt;!&ndash; name指参数名 &ndash;&gt;
+        <constructor-arg name="name" value="kuangshen2"/>
+    </bean>-->
+
+
+    <!-- 第三种根据参数类型设置 -->
+    <!--通过有参构造来创建java对象-->
+    <bean id="hello" class="com.yaozhou.pojo.User">
+        <constructor-arg name="name" value="尧神"/>
+    </bean>
+</beans>
