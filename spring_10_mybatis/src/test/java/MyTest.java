@@ -33,7 +33,7 @@ public class MyTest {
     @Test
     public void Spring_Mybatis_Test2() throws IOException {
         ApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
-        UserMapper mapper = context.getBean("userMapper",UserMapper.class);
+        UserMapper mapper = context.getBean("userMapper2",UserMapper.class);
         List<User> userList = mapper.getUserList();
         for (User user : userList) {
             System.out.println(user.getUserName());
