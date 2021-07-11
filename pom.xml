@@ -12,11 +12,11 @@
         <module>spring-01-ioc</module>
         <module>spring_02_ioc2</module>
         <module>spring_04_di</module>
-        <module>spring_05_ AutoWired</module>
         <module>spring_05_autowried</module>
         <module>spring_06_anno</module>
         <module>spring_07_appconfig</module>
         <module>spring_08_proxy</module>
+        <module>spring_09_aop</module>
     </modules>
 
     <dependencies>
@@ -52,6 +52,12 @@
                 <artifactId>log4j</artifactId>
                 <version>1.2.17</version>
             </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>1.9.4</version>
+            </dependency>
+
     </dependencies>
     <build>
         <resources>
