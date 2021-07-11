@@ -1,4 +1,4 @@
-package com.yaozhou;
+package com.yaozhou.demo01;
 
 import org.junit.Test;
 
