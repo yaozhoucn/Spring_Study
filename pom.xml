@@ -16,6 +16,7 @@
         <module>spring_05_autowried</module>
         <module>spring_06_anno</module>
         <module>spring_07_appconfig</module>
+        <module>spring_08_proxy</module>
     </modules>
 
     <dependencies>
