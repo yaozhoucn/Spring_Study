@@ -20,4 +20,15 @@
         <aop:advisor advice-ref="log" pointcut-ref="pointcut"/>
         <aop:advisor advice-ref="afterLog" pointcut-ref="pointcut"/>
     </aop:config>
+
+    <!--方式二：自定义-->
+    <bean id="diy" class="com.yaozhou.diy.DiyPointCut"/>
+
+    <aop:config>
+        <aop:aspect id="diyPoinyCut" ref="diy">
+            <aop:pointcut id="diyCut" expression="execution(* com.yaozhou.service.UserServiceImpl.*(..))"/>
+            <aop:before method="before" pointcut-ref="diyCut"/>
+            <aop:after method="after" pointcut-ref="diyCut"/>
+        </aop:aspect>
+    </aop:config>
 </beans>
