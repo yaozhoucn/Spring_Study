@@ -8,6 +8,7 @@ import java.lang.reflect.Proxy;
  * Created by WXHang on HANG at 2021/7/11 13:52
  */
 public class ProxyInvocationHandler implements InvocationHandler {
+    //被代理的接口
     private Rent rent;
 
     public void setRent(Rent rent) {
@@ -23,6 +24,7 @@ public class ProxyInvocationHandler implements InvocationHandler {
     }
     // proxy : 代理类
     // method : 代理类的调用处理程序的方法对象
+    //处理代理实例，并返回结果
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         seeHouse();
         Object result = method.invoke(rent, args);
