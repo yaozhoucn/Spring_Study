@@ -12,8 +12,7 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @ComponentScan("com.yaozhou.pojo")
-@Import(com.yaozhou.config.MyConfig2.class)
-public class MyConfig {
+public class MyConfig2 {
     @Bean
     public User getUser(){
         return new User();
