@@ -5,6 +5,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.annotation.Resource;
 import java.io.IOException;
@@ -27,4 +29,15 @@ public class MyTest {
             System.out.println(user.getUserName());
         }
     }
+
+    @Test
+    public void Spring_Mybatis_Test2() throws IOException {
+        ApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+        UserMapper mapper = context.getBean("userMapper",UserMapper.class);
+        List<User> userList = mapper.getUserList();
+        for (User user : userList) {
+            System.out.println(user.getUserName());
+        }
+    }
+
 }
